@@ -1,96 +1,94 @@
-# Obsidian Sample Plugin
+# Obsidian with Gemini
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+This is my first attempt at creating a Plugin for [Obsidian](https://obsidian.md). I use Obsidian as my daily note taking app to create my knowledge base following some Personal Knowledge Management systems but with my own personal touch. 
 
-This project uses Typescript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definition format, which contains TSDoc comments describing what it does.
+The ideia to create this Plugin came from participating in the [Imersão Alura + Google](https://www.alura.com.br/artigos/imersao-ia) which is an event created in a partnership between [Alura](https://www.alura.com.br/) technology school and Google. The code created here is based on a [sample plugin for Obsidian](https://github.com/obsidianmd/obsidian-sample-plugin) and the [QuickStart Guide for the Google Gemini API](https://ai.google.dev/gemini-api/docs/ai-studio-quickstart). Bellow are the requirements and how to run this Plugin to your local Obsidian Vault (I am still going to apply for it to be availbel as a ommunity Plugin) 
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+# How to use this plugin 
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+This plugin is not yet available in the Community Plugins in Obsidian so ou need to install it locally. To do this follow the steps bellow
 
-## First time developing plugins?
+## Step 1: Create a new vault.  
 
-Quick starting guide for new plugin devs:
+Dowload the [Obsidian](https://obsidian.md) app and install it on your computer if not yet installed. Create a new vault (recommended) or open one of your vaults. A vault is just a folder on your computer so you can access it outside the Obsidian App.  
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+## Step 2: Download this project. 
 
-## Releasing new releases
+Dowload or clone this project to your computer. To download just click on the green button with `<code>` on it and click on download. To clone use the following command:
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
-
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
-
-## Adding your plugin to the community plugin list
-
-- Check https://github.com/obsidianmd/obsidian-releases/blob/master/plugin-review.md
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
-
-## How to use
-
-- Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
-
-## Manually installing the plugin
-
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
-
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
-
-## Funding URL
-
-You can include funding URLs where people who use your plugin can financially support it.
-
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
-
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
+```shell
+git clone https://github.com/rafaelalvesitm/obsidian-with-gemini-plugin.git
 ```
 
-If you have multiple URLs, you can also do:
+## Step 3: Create a folder for the plugin and move necessary files.
 
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
+Open you obsidian Vault in your computer and on the `.obsidian` folder create a folder called `plugins`. Inside this new folder create a folder called `obsidian-with-gemini-plugin`. Move the files `main.js`, `styles.css` and `manifest.json`  to this folder. 
+
+## Step 4: Open yout valt 
+
+Open your valt and click on the settings (Gear icon on the bottom left corner). Go to the community plugins and enable it. See it the `Google Gemini Integration` app is shown. Click on the gear icon for this plugin. Here you need to put your API Key for the Google Gemini API ([Create one here](https://aistudio.google.com/app/u/1/apikey)). 
+
+## Step 5: Use the plugin
+
+To use this plugin, just select some text that you want to sent to Gemini and open the Command Pallet (CTRL + P) and find the `Quick Message` command. Click on it and the select text should be send to Gemini. When it is processed the result is show below your selected text. 
+
+# How to use this plugin and change it if needed
+
+## Requirements
+
+- [Git](https://git-scm.com/) installed on your local machine.
+- A local development environment for [Node.js](https://node.js.org/en/about/).
+- A code editor, such as [Visual Studio Code](https://code.visualstudio.com/).
+- [Obsidian](https://obsidian.md) app with a Vault created. I recommend to test it on an new Vault.
+
+## Step 1: Download the plugin and put it into a vault. 
+
+The first step is to create a new valt in [Obsidian](https://obsidian.md). Then you must use the terminal to go to that valult location and create a folder for the plugins, if it was not created already. Finally you need to move inside the Plugins folder. Use the following commands:
+
+``` shell
+cd path/to/vault
+mkdir .obsidian/plugins
+cd .obsidian/plugins
 ```
 
-## API Documentation
+Inside this folder you should clone or download and extract the content of this repository. To clone, use the following command
 
-See https://github.com/obsidianmd/obsidian-api
+```shell
+git clone https://github.com/rafaelalvesitm/obsidian-with-gemini-plugin.git
+```
+
+## Step 2: Build the plugin
+
+In this step, you'll compile the plugin so that Obsidian can load it locally. To do this, navigate to the plugin directory with the commands:
+
+```shell
+cd obsidian-with-gemini-plugin
+```
+
+Then you need to Install dependencies for the app on yout computer. To do this use the following command:
+
+```shell
+npm install
+```
+
+Finally, you need to compile the source code. To do this use the following command:
+The following command keeps running in the terminal and rebuilds the plugin when you modify the source code.
+```shell
+npm run dev
+```
+
+**OBS 2:** The command above keeps running in the terminal and rebuilds the plugin when you modify the source code.  
+**OBS 2:** Notice that the plugin directory now has a main.js file that contains a compiled version of the plugin.
+
+## Step 3: Enable the plugin
+
+To load a plugin in Obsidian, you first need to enable it. To do this, following the steps below:
+
+- In Obsidian, open Settings.
+- In the side menu, select Community plugins.
+- Select Turn on community plugins.
+- Under Installed plugins, enable the Sample Plugin by selecting the toggle button next to it.
+- You're now ready to use the plugin in Obsidian. 
+- Next, you can make some changes to the plugin.
+
+After that you can make whener change you find useful in the file `main.ts` and then see the changes on the Obsidian App. Sometimes it is needed to reload the app to see the changes. 
