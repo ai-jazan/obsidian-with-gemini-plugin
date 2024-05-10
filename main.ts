@@ -1,7 +1,7 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
 // Carrega a classe do Google Generative AI
-import type { GoogleGenerativeAI } from "@google/generative-ai";
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Define as variáveis de configuração do plugin
 interface GeminiPluginSettings {
@@ -25,7 +25,7 @@ const DEFAULT_SETTINGS: GeminiPluginSettings = {
 // Define a classe do plugin e suas funções
 export default class GeminiPlugin extends Plugin {
     settings: GeminiPluginSettings; // Configurações do plugin
-    genAI: GoogleGenerativeAI; // Instância do Google Generative AI
+    genAI: typeof GoogleGenerativeAI; // Instância do Google Generative AI
 
     // Função de inicialização do plugin
     async onload() {
