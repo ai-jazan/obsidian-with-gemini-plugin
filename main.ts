@@ -252,7 +252,7 @@ class SampleSettingTab extends PluginSettingTab {
 }
 
 // Define o modelo que será utilizado no Google Generative AI e executa a função de geração de conteúdo
-async function run(prompt: string, genAI: GoogleGenerativeAI) {
+async function run(prompt: string, genAI: any) {
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro"});
     const result = await model.generateContent(prompt);
