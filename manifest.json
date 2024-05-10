@@ -1,11 +1,11 @@
 {
 	"id": "gemini-integration",
-	"name": "Google Gemini Integration",
+	"name": "Google Gemini AI Integration",
 	"version": "0.1.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "Integrates Google Gemini AI into Obsidian",
+	"author": "Rafael Alves",
+	"authorUrl": "https://rafaelalvesitm.com",
+	// "fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": false
 }
